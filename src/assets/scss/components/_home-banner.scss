@@ -1,0 +1,137 @@
+#main-banner {
+  height: rem-calc(600);
+  overflow: hidden;
+  @extend .rel;
+
+  .row {
+    @extend %full-height;
+    @extend .rel;
+  }
+}
+
+#menu-products {
+  @extend .rel;
+  z-index: 888;
+  width: rem-calc(300);
+
+  h3 {
+    @extend .small-12;
+    @extend .float-left;
+    margin: 0;
+    padding: rem-calc(10 20);
+    background-color: $primary-color;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 12px 12px 0 0;
+    font-size: rem-calc(18);
+  }
+  a {
+    width: 100%;
+    float: left;
+    display: block;
+    padding: rem-calc(0 20);
+    font-size: rem-calc(18);
+    background: #f6f6f6;
+    height: rem-calc(40);
+    line-height: rem-calc(40);
+    color: $medium-gray;
+    
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+
+  li:last-child {
+    a {
+      border-radius: 0 0 12px 12px;
+    }
+  }
+
+}
+
+#main-slider {
+  @extend .abs;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  @extend %full-height;
+
+  figure {
+    @extend .small-12;
+    @extend .abs;
+    @extend %full-height;
+    -webkit-background-size:cover;
+    background-size:cover;
+  }
+
+  .item {
+    @extend %full-height;
+    z-index: 99;
+
+    .d-table {
+      @extend %full-height;
+      padding-top: rem-calc(220);
+    }
+  }
+}
+
+.banner-pager {
+  @extend .abs;
+  bottom: 0;
+  left: 0;
+  @extend .text-center;
+  z-index: 888;
+  padding: rem-calc(20 0);
+  
+  span {
+    display: inline-block;
+    width: rem-calc(20);
+    height: rem-calc(20);
+    border-radius: 100%;
+    background-color: $white;
+    margin: 0 5px;
+    cursor: pointer;
+
+    &.cycle-pager-active {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.blockquote {
+  @extend %full-height;
+  h2 {
+    font-size: rem-calc(26);
+    text-transform: uppercase;
+  }
+  .button-white {
+    font-size: rem-calc(20);
+    text-transform: uppercase;
+  }
+  .columns {
+    padding: 0;
+  }
+}
+
+@include breakpoint(medium down) {
+  #main-banner {
+    height: rem-calc(300);
+  }
+  #main-slider{
+    .d-table {
+      width: 100%;
+      padding-top: rem-calc(60) !important;
+
+      h2 {
+        text-align: center !important;
+        font-size: rem-calc(20);
+      }
+      .button-white {
+        font-size: rem-calc(16) !important;
+      }
+    }
+    .blockquote {
+      width: 100%;
+    }
+  }
+}
