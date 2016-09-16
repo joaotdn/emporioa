@@ -23,6 +23,111 @@
 .no-margin {
   margin: 0 !important;
 }
+.section-title {
+  h2 {
+    font-style: italic;
+    font-weight: 400;
+    color: $primary-color;
+    text-transform: uppercase;
+    margin-bottom: rem-calc(40);
+
+    &:before {
+      content: '';
+      display: block;
+      width: 36%;
+      position: absolute;
+      left: 0;
+      top: rem-calc(24);
+      border-bottom: 1px solid $primary-color;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 36%;
+      position: absolute;
+      right: 0;
+      top: rem-calc(24);
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+}
+.button {
+  background-color: $primary-color;
+  display: inline-block;
+  padding: rem-calc(10 20);
+  color: $white;
+  border-radius: 8px;
+
+  &:hover {
+    color: #d5bd7e;
+  }
+}
+.btn-gold {
+  background-color: #d5bd7e;
+  display: inline-block;
+  padding: rem-calc(10 20);
+  color: $white;
+  border-radius: 8px;
+  font-size: rem-calc(24);
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.form-user {
+  @extend .small-12;
+  @extend .float-left;
+  padding: rem-calc(20 10);
+  padding-bottom: rem-calc(10);
+  border: 1px solid #999;
+  margin-bottom: rem-calc(40);
+
+  input {
+    border-radius: 8px;
+    margin-bottom: rem-calc(10);
+    background-color: #eaeaea;
+  }
+
+  &.login {
+    position: relative;
+    padding: 0;
+  }
+
+  > div {
+    height: 100%;
+    padding: rem-calc(20);
+  }
+
+
+}
+
+.text-up {
+  text-transform: uppercase;
+}
+@include breakpoint(large up) {
+  .form-user {
+    &.login {
+      height: rem-calc(250);
+
+      > div:last-child {
+        border-left: 1px solid #999;
+      }
+    }
+  }
+}
+
+@include breakpoint(medium down) {
+  .section-title {
+    h2 {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
 
 /* perfect-scrollbar v0.6.12 */
 .ps-container {

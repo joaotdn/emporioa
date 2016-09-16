@@ -5,33 +5,6 @@
   .row {
     display: block;
   }
-  h2 {
-    font-style: italic;
-    font-weight: 400;
-    color: $primary-color;
-    text-transform: uppercase;
-    margin-bottom: rem-calc(40);
-
-    &:before {
-      content: '';
-      display: block;
-      width: 36%;
-      position: absolute;
-      left: 0;
-      top: rem-calc(24);
-      border-bottom: 1px solid $primary-color;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      width: 36%;
-      position: absolute;
-      right: 0;
-      top: rem-calc(24);
-      border-bottom: 1px solid $primary-color;
-    }
-  }
 }
 
 .product-block {
@@ -94,13 +67,5 @@
 @include breakpoint(medium down) {
   .product-block {
     height: rem-calc(435);
-  }
-  #list-products {
-    h2 {
-      &:before,
-      &:after {
-        display: none;
-      }
-    }
   }
 }

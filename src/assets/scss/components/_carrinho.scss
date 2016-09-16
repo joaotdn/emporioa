@@ -1,0 +1,40 @@
+#cart {
+  position: relative;
+  background-color: $white;
+}
+#cart-list {
+  margin-bottom: 0;
+
+  tr {
+    td {
+      border: 1px solid #eaeaea;
+    }
+  }
+}
+.tfooter {
+  padding: rem-calc(10 20);
+  border: 1px solid #eaeaea;
+  border-top: none;
+  margin-bottom: rem-calc(40);
+}
+.pre-check {
+  background-color: $primary-color;
+  padding: rem-calc(20);
+  margin-bottom: rem-calc(40);
+
+  p {
+    @extend .small-12;
+    @extend .float-left;
+
+    &:not(:last-child) {
+      border-bottom: 1px dotted $white;
+      padding-bottom: rem-calc(20);
+      margin-bottom: rem-calc(20);
+    }
+  }
+
+  span {
+    color: $white;
+    font-size: rem-calc(20);
+  }
+}
